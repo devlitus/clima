@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from 'prop-types';
 
 export default class Formulario extends Component {
   ciudadRef = React.createRef();
@@ -39,10 +40,10 @@ export default class Formulario extends Component {
                 </select>
                 <label htmlFor="pais">País:</label>
               </div>
-              <div className="input-field col s12 m8 l4 offset-2 buscador">
+              <div className="input-field col s12 m8 l4 offset-m2 buscador">
                 <input
                   type="submit"
-                  className="waves-effect waves-light btn-lager yellow accent-4"
+                  className="waves-effect waves-light btn btn-lager yellow accent-4"
                   value="Buscar..."
                 />
               </div>
@@ -52,4 +53,7 @@ export default class Formulario extends Component {
       </div>
     );
   }
+}
+Formulario.propTypes = {
+  consulta: PropTypes.func.isRequired
 }
